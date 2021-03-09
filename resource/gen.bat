@@ -1,1 +1,0 @@
-protoc --proto_path=. --java_out=../src/ rpc.proto
