@@ -23,8 +23,8 @@ public class Login extends HttpServlet {
         routerMap.put("Consumer", this::Consumer);
         routerMap.put("HttpTest", this::HttpTest);
 
-        DataSourceManager DSM = new DataSourceManager();
-        DSM.AddDataSource(1, "192.168.3.1", "root", "root", "3000", "2", "true");
+//        DataSourceManager DSM = new DataSourceManager();
+//        DSM.AddDataSource(1, "192.168.3.1", "root", "root", "3000", "2", "true");
     }
 
     private void errorRouteResp(HttpServletResponse resp, String route) {
