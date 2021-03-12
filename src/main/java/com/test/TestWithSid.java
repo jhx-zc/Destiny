@@ -25,4 +25,19 @@ public class TestWithSid extends HttpServlet {
                 "</body>\n" +
                 "</html>");
     }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html,charset=utf-8");
+        PrintWriter out = resp.getWriter();
+        out.println("<html>\n" +
+                "<head>\n" +
+                "    <title>post_sid!</title>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "\t<h1>post_sid: get" +
+                "</h1>\n" +
+                "</body>\n" +
+                "</html>");
+    }
 }

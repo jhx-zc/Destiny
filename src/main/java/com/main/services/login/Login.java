@@ -1,5 +1,6 @@
 package com.main.services.login;
 
+import com.main.module.db.database.datasource.DataSourceManager;
 import com.main.module.rpc.Rpc;
 
 import javax.servlet.*;
@@ -21,6 +22,9 @@ public class Login extends HttpServlet {
         routerMap.put("Seller", this::Seller);
         routerMap.put("Consumer", this::Consumer);
         routerMap.put("HttpTest", this::HttpTest);
+
+        DataSourceManager DSM = new DataSourceManager();
+        DSM.AddDataSource(1, "192.168.3.1", "root", "root", "3000", "2", "true");
     }
 
     private void errorRouteResp(HttpServletResponse resp, String route) {
@@ -46,6 +50,46 @@ public class Login extends HttpServlet {
         router.accept(req, resp);
     }
 
+    protected boolean JudgePWD(String username, String pwd) {
+        //todo query database for count is valid
+        //search sql SELECT .e.g. select * from table_name where username = ?
+        //sql java param. java sql 防注入 .SQL PARAM
+
+        //了解什么是注入 https://zhuanlan.zhihu.com/p/82389858
+        //如何使用 PreparedStatement https://www.cnblogs.com/iyangyuan/p/4809494.html
+
+        //参考 https://blog.csdn.net/chen88358323/article/details/7613257
+
+        //抽空了解 sql语句
+        /* 查询数据库
+           boolean result = false;//默认账号密码错误
+           String sql = "select count(*) from test_preparedstatement where username=? and password=?";
+           prepar = conn.prepareStatement(sql);
+           prepar.setString(1, name);
+           prepar.setString(2, password);
+           res = prepar.executeQuery();
+           if (res.next())   {
+               if (res.getInt(1) > 0){
+               //校验发现账号密码匹配正确
+                   result = true;
+               }
+           }
+        * */
+
+         /* 更新数据库
+         String sql="insert into test_preparedstatement (username,password,mail,registtime) values(?,?,?,?)";
+           prepar=conn.prepareStatement(sql);
+           prepar.setString(1,person.getUsername());
+           prepar.setString(2,person.getPassword());
+           prepar.setString(3,person.getMail());
+           prepar.setTimestamp(4,person.getRegistTime());
+           prepar.executeUpdate();
+        * */
+
+
+        return false;
+    }
+
     //后台管理登录
     protected void Manager(HttpServletRequest req, HttpServletResponse resp) {
         int len = req.getContentLength();
@@ -57,8 +101,12 @@ public class Login extends HttpServlet {
 
             Rpc.LoginReq loginReq = Rpc.LoginReq.parseFrom(buffer);
             PrintWriter writer = resp.getWriter();
-            writer.write("<p>username:"+loginReq.getUsername()+"</p>");
-            writer.write("<p>password:"+loginReq.getPassword()+"</p>");
+            writer.write("<p>username:" + loginReq.getUsername() + "</p>");
+            writer.write("<p>password:" + loginReq.getPassword() + "</p>");
+
+            //校验用户密码账号是否对应
+            boolean isValidUser = JudgePWD(loginReq.getUsername(), loginReq.getPassword());
+            writer.write("<p>isValidUser:" + isValidUser + "</p>");
 
         } catch (IOException e) {
             e.printStackTrace();
