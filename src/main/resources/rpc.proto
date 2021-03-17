@@ -19,6 +19,17 @@ message LoginResp{
   string sid = 2;
 }
 
+enum GoodsTypes{
+  //数码
+  Digital = 0;
+  //家电
+  HomeAppliances = 1;
+  //日用百货
+  DailyNecessities = 2;
+  //服饰
+  Clothing = 3;
+}
+
 message Goods{
   int32 id = 1;
   string imgUrl = 2;
@@ -28,8 +39,10 @@ message Goods{
   string brief = 6;
   string detail = 7;
 
+  GoodsTypes goodsType = 8;
+
   //当前库存
-  int32 totalSize = 8;
+  int32 totalSize = 9;
 }
 
 message GoodsList{
@@ -38,4 +51,9 @@ message GoodsList{
 
 message GoodsUpdateRet{
   bool success = 1;
+}
+
+message ShopGoods{
+  int32 goodsId = 1;
+  int32 count = 2;
 }

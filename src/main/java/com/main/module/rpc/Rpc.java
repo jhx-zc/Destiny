@@ -130,6 +130,164 @@ public final class Rpc {
     // @@protoc_insertion_point(enum_scope:com.main.module.rpc.LoginRespCode)
   }
 
+  /**
+   * Protobuf enum {@code com.main.module.rpc.GoodsTypes}
+   */
+  public enum GoodsTypes
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     *数码
+     * </pre>
+     *
+     * <code>Digital = 0;</code>
+     */
+    Digital(0),
+    /**
+     * <pre>
+     *家电
+     * </pre>
+     *
+     * <code>HomeAppliances = 1;</code>
+     */
+    HomeAppliances(1),
+    /**
+     * <pre>
+     *日用百货
+     * </pre>
+     *
+     * <code>DailyNecessities = 2;</code>
+     */
+    DailyNecessities(2),
+    /**
+     * <pre>
+     *服饰
+     * </pre>
+     *
+     * <code>Clothing = 3;</code>
+     */
+    Clothing(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     *数码
+     * </pre>
+     *
+     * <code>Digital = 0;</code>
+     */
+    public static final int Digital_VALUE = 0;
+    /**
+     * <pre>
+     *家电
+     * </pre>
+     *
+     * <code>HomeAppliances = 1;</code>
+     */
+    public static final int HomeAppliances_VALUE = 1;
+    /**
+     * <pre>
+     *日用百货
+     * </pre>
+     *
+     * <code>DailyNecessities = 2;</code>
+     */
+    public static final int DailyNecessities_VALUE = 2;
+    /**
+     * <pre>
+     *服饰
+     * </pre>
+     *
+     * <code>Clothing = 3;</code>
+     */
+    public static final int Clothing_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static GoodsTypes valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static GoodsTypes forNumber(int value) {
+      switch (value) {
+        case 0: return Digital;
+        case 1: return HomeAppliances;
+        case 2: return DailyNecessities;
+        case 3: return Clothing;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<GoodsTypes>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        GoodsTypes> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<GoodsTypes>() {
+            public GoodsTypes findValueByNumber(int number) {
+              return GoodsTypes.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.main.module.rpc.Rpc.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final GoodsTypes[] VALUES = values();
+
+    public static GoodsTypes valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private GoodsTypes(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.main.module.rpc.GoodsTypes)
+  }
+
   public interface LoginReqOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.main.module.rpc.LoginReq)
       com.google.protobuf.MessageOrBuilder {
@@ -1594,11 +1752,22 @@ public final class Rpc {
         getDetailBytes();
 
     /**
+     * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+     * @return The enum numeric value on the wire for goodsType.
+     */
+    int getGoodsTypeValue();
+    /**
+     * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+     * @return The goodsType.
+     */
+    com.main.module.rpc.Rpc.GoodsTypes getGoodsType();
+
+    /**
      * <pre>
      *当前库存
      * </pre>
      *
-     * <code>int32 totalSize = 8;</code>
+     * <code>int32 totalSize = 9;</code>
      * @return The totalSize.
      */
     int getTotalSize();
@@ -1620,6 +1789,7 @@ public final class Rpc {
       name_ = "";
       brief_ = "";
       detail_ = "";
+      goodsType_ = 0;
     }
 
     @java.lang.Override
@@ -1692,6 +1862,12 @@ public final class Rpc {
               break;
             }
             case 64: {
+              int rawValue = input.readEnum();
+
+              goodsType_ = rawValue;
+              break;
+            }
+            case 72: {
 
               totalSize_ = input.readInt32();
               break;
@@ -1913,14 +2089,33 @@ public final class Rpc {
       }
     }
 
-    public static final int TOTALSIZE_FIELD_NUMBER = 8;
+    public static final int GOODSTYPE_FIELD_NUMBER = 8;
+    private int goodsType_;
+    /**
+     * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+     * @return The enum numeric value on the wire for goodsType.
+     */
+    @java.lang.Override public int getGoodsTypeValue() {
+      return goodsType_;
+    }
+    /**
+     * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+     * @return The goodsType.
+     */
+    @java.lang.Override public com.main.module.rpc.Rpc.GoodsTypes getGoodsType() {
+      @SuppressWarnings("deprecation")
+      com.main.module.rpc.Rpc.GoodsTypes result = com.main.module.rpc.Rpc.GoodsTypes.valueOf(goodsType_);
+      return result == null ? com.main.module.rpc.Rpc.GoodsTypes.UNRECOGNIZED : result;
+    }
+
+    public static final int TOTALSIZE_FIELD_NUMBER = 9;
     private int totalSize_;
     /**
      * <pre>
      *当前库存
      * </pre>
      *
-     * <code>int32 totalSize = 8;</code>
+     * <code>int32 totalSize = 9;</code>
      * @return The totalSize.
      */
     @java.lang.Override
@@ -1963,8 +2158,11 @@ public final class Rpc {
       if (!getDetailBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, detail_);
       }
+      if (goodsType_ != com.main.module.rpc.Rpc.GoodsTypes.Digital.getNumber()) {
+        output.writeEnum(8, goodsType_);
+      }
       if (totalSize_ != 0) {
-        output.writeInt32(8, totalSize_);
+        output.writeInt32(9, totalSize_);
       }
       unknownFields.writeTo(output);
     }
@@ -1999,9 +2197,13 @@ public final class Rpc {
       if (!getDetailBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, detail_);
       }
+      if (goodsType_ != com.main.module.rpc.Rpc.GoodsTypes.Digital.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, goodsType_);
+      }
       if (totalSize_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, totalSize_);
+          .computeInt32Size(9, totalSize_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2032,6 +2234,7 @@ public final class Rpc {
           .equals(other.getBrief())) return false;
       if (!getDetail()
           .equals(other.getDetail())) return false;
+      if (goodsType_ != other.goodsType_) return false;
       if (getTotalSize()
           != other.getTotalSize()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -2059,6 +2262,8 @@ public final class Rpc {
       hash = (53 * hash) + getBrief().hashCode();
       hash = (37 * hash) + DETAIL_FIELD_NUMBER;
       hash = (53 * hash) + getDetail().hashCode();
+      hash = (37 * hash) + GOODSTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + goodsType_;
       hash = (37 * hash) + TOTALSIZE_FIELD_NUMBER;
       hash = (53 * hash) + getTotalSize();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -2208,6 +2413,8 @@ public final class Rpc {
 
         detail_ = "";
 
+        goodsType_ = 0;
+
         totalSize_ = 0;
 
         return this;
@@ -2243,6 +2450,7 @@ public final class Rpc {
         result.price_ = price_;
         result.brief_ = brief_;
         result.detail_ = detail_;
+        result.goodsType_ = goodsType_;
         result.totalSize_ = totalSize_;
         onBuilt();
         return result;
@@ -2316,6 +2524,9 @@ public final class Rpc {
         if (!other.getDetail().isEmpty()) {
           detail_ = other.detail_;
           onChanged();
+        }
+        if (other.goodsType_ != 0) {
+          setGoodsTypeValue(other.getGoodsTypeValue());
         }
         if (other.getTotalSize() != 0) {
           setTotalSize(other.getTotalSize());
@@ -2746,13 +2957,67 @@ public final class Rpc {
         return this;
       }
 
+      private int goodsType_ = 0;
+      /**
+       * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+       * @return The enum numeric value on the wire for goodsType.
+       */
+      @java.lang.Override public int getGoodsTypeValue() {
+        return goodsType_;
+      }
+      /**
+       * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+       * @param value The enum numeric value on the wire for goodsType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGoodsTypeValue(int value) {
+        
+        goodsType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+       * @return The goodsType.
+       */
+      @java.lang.Override
+      public com.main.module.rpc.Rpc.GoodsTypes getGoodsType() {
+        @SuppressWarnings("deprecation")
+        com.main.module.rpc.Rpc.GoodsTypes result = com.main.module.rpc.Rpc.GoodsTypes.valueOf(goodsType_);
+        return result == null ? com.main.module.rpc.Rpc.GoodsTypes.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+       * @param value The goodsType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGoodsType(com.main.module.rpc.Rpc.GoodsTypes value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        goodsType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGoodsType() {
+        
+        goodsType_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int totalSize_ ;
       /**
        * <pre>
        *当前库存
        * </pre>
        *
-       * <code>int32 totalSize = 8;</code>
+       * <code>int32 totalSize = 9;</code>
        * @return The totalSize.
        */
       @java.lang.Override
@@ -2764,7 +3029,7 @@ public final class Rpc {
        *当前库存
        * </pre>
        *
-       * <code>int32 totalSize = 8;</code>
+       * <code>int32 totalSize = 9;</code>
        * @param value The totalSize to set.
        * @return This builder for chaining.
        */
@@ -2779,7 +3044,7 @@ public final class Rpc {
        *当前库存
        * </pre>
        *
-       * <code>int32 totalSize = 8;</code>
+       * <code>int32 totalSize = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalSize() {
@@ -4123,6 +4388,564 @@ public final class Rpc {
 
   }
 
+  public interface ShopGoodsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.main.module.rpc.ShopGoods)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 goodsId = 1;</code>
+     * @return The goodsId.
+     */
+    int getGoodsId();
+
+    /**
+     * <code>int32 count = 2;</code>
+     * @return The count.
+     */
+    int getCount();
+  }
+  /**
+   * Protobuf type {@code com.main.module.rpc.ShopGoods}
+   */
+  public static final class ShopGoods extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.main.module.rpc.ShopGoods)
+      ShopGoodsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ShopGoods.newBuilder() to construct.
+    private ShopGoods(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShopGoods() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ShopGoods();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ShopGoods(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              goodsId_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              count_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_ShopGoods_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_ShopGoods_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.main.module.rpc.Rpc.ShopGoods.class, com.main.module.rpc.Rpc.ShopGoods.Builder.class);
+    }
+
+    public static final int GOODSID_FIELD_NUMBER = 1;
+    private int goodsId_;
+    /**
+     * <code>int32 goodsId = 1;</code>
+     * @return The goodsId.
+     */
+    @java.lang.Override
+    public int getGoodsId() {
+      return goodsId_;
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 2;
+    private int count_;
+    /**
+     * <code>int32 count = 2;</code>
+     * @return The count.
+     */
+    @java.lang.Override
+    public int getCount() {
+      return count_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (goodsId_ != 0) {
+        output.writeInt32(1, goodsId_);
+      }
+      if (count_ != 0) {
+        output.writeInt32(2, count_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (goodsId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, goodsId_);
+      }
+      if (count_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, count_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.main.module.rpc.Rpc.ShopGoods)) {
+        return super.equals(obj);
+      }
+      com.main.module.rpc.Rpc.ShopGoods other = (com.main.module.rpc.Rpc.ShopGoods) obj;
+
+      if (getGoodsId()
+          != other.getGoodsId()) return false;
+      if (getCount()
+          != other.getCount()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GOODSID_FIELD_NUMBER;
+      hash = (53 * hash) + getGoodsId();
+      hash = (37 * hash) + COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getCount();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.main.module.rpc.Rpc.ShopGoods parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.main.module.rpc.Rpc.ShopGoods parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.main.module.rpc.Rpc.ShopGoods parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.main.module.rpc.Rpc.ShopGoods parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.main.module.rpc.Rpc.ShopGoods parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.main.module.rpc.Rpc.ShopGoods parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.main.module.rpc.Rpc.ShopGoods parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.main.module.rpc.Rpc.ShopGoods parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.main.module.rpc.Rpc.ShopGoods parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.main.module.rpc.Rpc.ShopGoods parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.main.module.rpc.Rpc.ShopGoods parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.main.module.rpc.Rpc.ShopGoods parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.main.module.rpc.Rpc.ShopGoods prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.main.module.rpc.ShopGoods}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.main.module.rpc.ShopGoods)
+        com.main.module.rpc.Rpc.ShopGoodsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_ShopGoods_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_ShopGoods_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.main.module.rpc.Rpc.ShopGoods.class, com.main.module.rpc.Rpc.ShopGoods.Builder.class);
+      }
+
+      // Construct using com.main.module.rpc.Rpc.ShopGoods.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        goodsId_ = 0;
+
+        count_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_ShopGoods_descriptor;
+      }
+
+      @java.lang.Override
+      public com.main.module.rpc.Rpc.ShopGoods getDefaultInstanceForType() {
+        return com.main.module.rpc.Rpc.ShopGoods.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.main.module.rpc.Rpc.ShopGoods build() {
+        com.main.module.rpc.Rpc.ShopGoods result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.main.module.rpc.Rpc.ShopGoods buildPartial() {
+        com.main.module.rpc.Rpc.ShopGoods result = new com.main.module.rpc.Rpc.ShopGoods(this);
+        result.goodsId_ = goodsId_;
+        result.count_ = count_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.main.module.rpc.Rpc.ShopGoods) {
+          return mergeFrom((com.main.module.rpc.Rpc.ShopGoods)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.main.module.rpc.Rpc.ShopGoods other) {
+        if (other == com.main.module.rpc.Rpc.ShopGoods.getDefaultInstance()) return this;
+        if (other.getGoodsId() != 0) {
+          setGoodsId(other.getGoodsId());
+        }
+        if (other.getCount() != 0) {
+          setCount(other.getCount());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.main.module.rpc.Rpc.ShopGoods parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.main.module.rpc.Rpc.ShopGoods) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int goodsId_ ;
+      /**
+       * <code>int32 goodsId = 1;</code>
+       * @return The goodsId.
+       */
+      @java.lang.Override
+      public int getGoodsId() {
+        return goodsId_;
+      }
+      /**
+       * <code>int32 goodsId = 1;</code>
+       * @param value The goodsId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGoodsId(int value) {
+        
+        goodsId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 goodsId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGoodsId() {
+        
+        goodsId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int count_ ;
+      /**
+       * <code>int32 count = 2;</code>
+       * @return The count.
+       */
+      @java.lang.Override
+      public int getCount() {
+        return count_;
+      }
+      /**
+       * <code>int32 count = 2;</code>
+       * @param value The count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCount(int value) {
+        
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 count = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCount() {
+        
+        count_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.main.module.rpc.ShopGoods)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.main.module.rpc.ShopGoods)
+    private static final com.main.module.rpc.Rpc.ShopGoods DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.main.module.rpc.Rpc.ShopGoods();
+    }
+
+    public static com.main.module.rpc.Rpc.ShopGoods getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ShopGoods>
+        PARSER = new com.google.protobuf.AbstractParser<ShopGoods>() {
+      @java.lang.Override
+      public ShopGoods parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ShopGoods(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShopGoods> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShopGoods> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.main.module.rpc.Rpc.ShopGoods getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_main_module_rpc_LoginReq_descriptor;
   private static final 
@@ -4148,6 +4971,11 @@ public final class Rpc {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_main_module_rpc_GoodsUpdateRet_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_main_module_rpc_ShopGoods_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_main_module_rpc_ShopGoods_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4160,15 +4988,20 @@ public final class Rpc {
       "\n\trpc.proto\022\023com.main.module.rpc\".\n\010Logi" +
       "nReq\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t" +
       "\"J\n\tLoginResp\0220\n\004code\030\001 \001(\0162\".com.main.m" +
-      "odule.rpc.LoginRespCode\022\013\n\003sid\030\002 \001(\t\"\200\001\n" +
+      "odule.rpc.LoginRespCode\022\013\n\003sid\030\002 \001(\t\"\264\001\n" +
       "\005Goods\022\n\n\002id\030\001 \001(\005\022\016\n\006imgUrl\030\002 \001(\t\022\014\n\004na" +
       "me\030\003 \001(\t\022\014\n\004star\030\004 \001(\005\022\r\n\005price\030\005 \001(\005\022\r\n" +
-      "\005brief\030\006 \001(\t\022\016\n\006detail\030\007 \001(\t\022\021\n\ttotalSiz" +
-      "e\030\010 \001(\005\"6\n\tGoodsList\022)\n\005goods\030\001 \003(\0132\032.co" +
-      "m.main.module.rpc.Goods\"!\n\016GoodsUpdateRe" +
-      "t\022\017\n\007success\030\001 \001(\010*2\n\rLoginRespCode\022\024\n\020E" +
-      "RROR_LOGIN_INFO\020\000\022\013\n\007SUCCESS\020\001B\025\n\023com.ma" +
-      "in.module.rpcb\006proto3"
+      "\005brief\030\006 \001(\t\022\016\n\006detail\030\007 \001(\t\0222\n\tgoodsTyp" +
+      "e\030\010 \001(\0162\037.com.main.module.rpc.GoodsTypes" +
+      "\022\021\n\ttotalSize\030\t \001(\005\"6\n\tGoodsList\022)\n\005good" +
+      "s\030\001 \003(\0132\032.com.main.module.rpc.Goods\"!\n\016G" +
+      "oodsUpdateRet\022\017\n\007success\030\001 \001(\010\"+\n\tShopGo" +
+      "ods\022\017\n\007goodsId\030\001 \001(\005\022\r\n\005count\030\002 \001(\005*2\n\rL" +
+      "oginRespCode\022\024\n\020ERROR_LOGIN_INFO\020\000\022\013\n\007SU" +
+      "CCESS\020\001*Q\n\nGoodsTypes\022\013\n\007Digital\020\000\022\022\n\016Ho" +
+      "meAppliances\020\001\022\024\n\020DailyNecessities\020\002\022\014\n\010" +
+      "Clothing\020\003B\025\n\023com.main.module.rpcb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4191,7 +5024,7 @@ public final class Rpc {
     internal_static_com_main_module_rpc_Goods_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_main_module_rpc_Goods_descriptor,
-        new java.lang.String[] { "Id", "ImgUrl", "Name", "Star", "Price", "Brief", "Detail", "TotalSize", });
+        new java.lang.String[] { "Id", "ImgUrl", "Name", "Star", "Price", "Brief", "Detail", "GoodsType", "TotalSize", });
     internal_static_com_main_module_rpc_GoodsList_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_main_module_rpc_GoodsList_fieldAccessorTable = new
@@ -4204,6 +5037,12 @@ public final class Rpc {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_main_module_rpc_GoodsUpdateRet_descriptor,
         new java.lang.String[] { "Success", });
+    internal_static_com_main_module_rpc_ShopGoods_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_com_main_module_rpc_ShopGoods_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_main_module_rpc_ShopGoods_descriptor,
+        new java.lang.String[] { "GoodsId", "Count", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
