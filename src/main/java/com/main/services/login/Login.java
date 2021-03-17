@@ -50,6 +50,18 @@ public class Login extends HttpServlet {
         router.accept(req, resp);
     }
 
+    @Override
+    protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setHeader("Access-Control-Allow-Origin", "*");
+        resp.setHeader("Access-Control-Allow-Credentials", "true");
+        resp.setHeader("Access-Control-Allow-Methods", "*");
+        resp.setHeader("Access-Control-Max-Age", "3600");
+        resp.setHeader("Access-Control-Allow-Headers", "Authorization,Origin,X-Requested-With,Content-Type,Accept,"
+                + "content-Type,origin,x-requested-with,content-type,accept,authorization,token,id,X-Custom-Header,X-Cookie,Connection,User-Agent,Cookie,*");
+        resp.setHeader("Access-Control-Request-Headers", "Authorization,Origin, X-Requested-With,content-Type,Accept");
+        resp.setHeader("Access-Control-Expose-Headers", "*");
+    }
+
     protected boolean JudgePWD(String username, String pwd) {
         //todo query database for count is valid
         //search sql SELECT .e.g. select * from table_name where username = ?
@@ -92,6 +104,7 @@ public class Login extends HttpServlet {
 
     //后台管理登录
     protected void Manager(HttpServletRequest req, HttpServletResponse resp) {
+        resp.setHeader("Access-Control-Allow-Origin", "*");
         int len = req.getContentLength();
         ServletInputStream iii = null;
         try {
@@ -99,15 +112,9 @@ public class Login extends HttpServlet {
             byte[] buffer = new byte[len];
             iii.read(buffer, 0, len);
 
-            Rpc.LoginReq loginReq = Rpc.LoginReq.parseFrom(buffer);
-            PrintWriter writer = resp.getWriter();
-            writer.write("<p>username:" + loginReq.getUsername() + "</p>");
-            writer.write("<p>password:" + loginReq.getPassword() + "</p>");
-
-            //校验用户密码账号是否对应
-            boolean isValidUser = JudgePWD(loginReq.getUsername(), loginReq.getPassword());
-            writer.write("<p>isValidUser:" + isValidUser + "</p>");
-
+//            Rpc.LoginReq loginReq = Rpc.LoginReq.parseFrom(buffer);
+            Rpc.LoginResp loginResp = Rpc.LoginResp.newBuilder().setCode(Rpc.LoginRespCode.SUCCESS).setSid("sid").build();
+            resp.getOutputStream().write(loginResp.toByteArray());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -133,7 +140,7 @@ public class Login extends HttpServlet {
         StringBuffer buffer = null;
 
         try {
-            URL url = new URL("http://localhost:8080/service_war_exploded/login/Manager");
+            URL url = new URL("http://localhost:8081/service_war_exploded/login/Manager");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setDoOutput(true);
             conn.setDoInput(true);

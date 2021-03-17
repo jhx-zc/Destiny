@@ -18,3 +18,24 @@ message LoginResp{
   LoginRespCode code = 1;
   string sid = 2;
 }
+
+message Goods{
+  int32 id = 1;
+  string imgUrl = 2;
+  string name = 3;
+  int32 star = 4;
+  int32 price = 5;
+  string brief = 6;
+  string detail = 7;
+
+  //当前库存
+  int32 totalSize = 8;
+}
+
+message GoodsList{
+  repeated Goods goods = 1;
+}
+
+message GoodsUpdateRet{
+  bool success = 1;
+}
