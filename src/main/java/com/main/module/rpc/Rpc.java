@@ -15,7 +15,7 @@ public final class Rpc {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * Protobuf enum {@code com.main.module.rpc.LoginRespCode}
+   * Protobuf enum {@code rpc.LoginRespCode}
    */
   public enum LoginRespCode
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -127,11 +127,11 @@ public final class Rpc {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:com.main.module.rpc.LoginRespCode)
+    // @@protoc_insertion_point(enum_scope:rpc.LoginRespCode)
   }
 
   /**
-   * Protobuf enum {@code com.main.module.rpc.GoodsTypes}
+   * Protobuf enum {@code rpc.GoodsTypes}
    */
   public enum GoodsTypes
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -285,11 +285,11 @@ public final class Rpc {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:com.main.module.rpc.GoodsTypes)
+    // @@protoc_insertion_point(enum_scope:rpc.GoodsTypes)
   }
 
   public interface LoginReqOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.main.module.rpc.LoginReq)
+      // @@protoc_insertion_point(interface_extends:rpc.LoginReq)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -317,11 +317,11 @@ public final class Rpc {
         getPasswordBytes();
   }
   /**
-   * Protobuf type {@code com.main.module.rpc.LoginReq}
+   * Protobuf type {@code rpc.LoginReq}
    */
   public static final class LoginReq extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.main.module.rpc.LoginReq)
+      // @@protoc_insertion_point(message_implements:rpc.LoginReq)
       LoginReqOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use LoginReq.newBuilder() to construct.
@@ -396,13 +396,13 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_LoginReq_descriptor;
+      return com.main.module.rpc.Rpc.internal_static_rpc_LoginReq_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_LoginReq_fieldAccessorTable
+      return com.main.module.rpc.Rpc.internal_static_rpc_LoginReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.main.module.rpc.Rpc.LoginReq.class, com.main.module.rpc.Rpc.LoginReq.Builder.class);
     }
@@ -648,21 +648,21 @@ public final class Rpc {
       return builder;
     }
     /**
-     * Protobuf type {@code com.main.module.rpc.LoginReq}
+     * Protobuf type {@code rpc.LoginReq}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.main.module.rpc.LoginReq)
+        // @@protoc_insertion_point(builder_implements:rpc.LoginReq)
         com.main.module.rpc.Rpc.LoginReqOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_LoginReq_descriptor;
+        return com.main.module.rpc.Rpc.internal_static_rpc_LoginReq_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_LoginReq_fieldAccessorTable
+        return com.main.module.rpc.Rpc.internal_static_rpc_LoginReq_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.main.module.rpc.Rpc.LoginReq.class, com.main.module.rpc.Rpc.LoginReq.Builder.class);
       }
@@ -695,7 +695,7 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_LoginReq_descriptor;
+        return com.main.module.rpc.Rpc.internal_static_rpc_LoginReq_descriptor;
       }
 
       @java.lang.Override
@@ -966,10 +966,10 @@ public final class Rpc {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.main.module.rpc.LoginReq)
+      // @@protoc_insertion_point(builder_scope:rpc.LoginReq)
     }
 
-    // @@protoc_insertion_point(class_scope:com.main.module.rpc.LoginReq)
+    // @@protoc_insertion_point(class_scope:rpc.LoginReq)
     private static final com.main.module.rpc.Rpc.LoginReq DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.main.module.rpc.Rpc.LoginReq();
@@ -1007,16 +1007,16 @@ public final class Rpc {
   }
 
   public interface LoginRespOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.main.module.rpc.LoginResp)
+      // @@protoc_insertion_point(interface_extends:rpc.LoginResp)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.com.main.module.rpc.LoginRespCode code = 1;</code>
+     * <code>.rpc.LoginRespCode code = 1;</code>
      * @return The enum numeric value on the wire for code.
      */
     int getCodeValue();
     /**
-     * <code>.com.main.module.rpc.LoginRespCode code = 1;</code>
+     * <code>.rpc.LoginRespCode code = 1;</code>
      * @return The code.
      */
     com.main.module.rpc.Rpc.LoginRespCode getCode();
@@ -1034,11 +1034,11 @@ public final class Rpc {
         getSidBytes();
   }
   /**
-   * Protobuf type {@code com.main.module.rpc.LoginResp}
+   * Protobuf type {@code rpc.LoginResp}
    */
   public static final class LoginResp extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.main.module.rpc.LoginResp)
+      // @@protoc_insertion_point(message_implements:rpc.LoginResp)
       LoginRespOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use LoginResp.newBuilder() to construct.
@@ -1113,13 +1113,13 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_LoginResp_descriptor;
+      return com.main.module.rpc.Rpc.internal_static_rpc_LoginResp_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_LoginResp_fieldAccessorTable
+      return com.main.module.rpc.Rpc.internal_static_rpc_LoginResp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.main.module.rpc.Rpc.LoginResp.class, com.main.module.rpc.Rpc.LoginResp.Builder.class);
     }
@@ -1127,14 +1127,14 @@ public final class Rpc {
     public static final int CODE_FIELD_NUMBER = 1;
     private int code_;
     /**
-     * <code>.com.main.module.rpc.LoginRespCode code = 1;</code>
+     * <code>.rpc.LoginRespCode code = 1;</code>
      * @return The enum numeric value on the wire for code.
      */
     @java.lang.Override public int getCodeValue() {
       return code_;
     }
     /**
-     * <code>.com.main.module.rpc.LoginRespCode code = 1;</code>
+     * <code>.rpc.LoginRespCode code = 1;</code>
      * @return The code.
      */
     @java.lang.Override public com.main.module.rpc.Rpc.LoginRespCode getCode() {
@@ -1346,21 +1346,21 @@ public final class Rpc {
       return builder;
     }
     /**
-     * Protobuf type {@code com.main.module.rpc.LoginResp}
+     * Protobuf type {@code rpc.LoginResp}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.main.module.rpc.LoginResp)
+        // @@protoc_insertion_point(builder_implements:rpc.LoginResp)
         com.main.module.rpc.Rpc.LoginRespOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_LoginResp_descriptor;
+        return com.main.module.rpc.Rpc.internal_static_rpc_LoginResp_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_LoginResp_fieldAccessorTable
+        return com.main.module.rpc.Rpc.internal_static_rpc_LoginResp_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.main.module.rpc.Rpc.LoginResp.class, com.main.module.rpc.Rpc.LoginResp.Builder.class);
       }
@@ -1393,7 +1393,7 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_LoginResp_descriptor;
+        return com.main.module.rpc.Rpc.internal_static_rpc_LoginResp_descriptor;
       }
 
       @java.lang.Override
@@ -1501,14 +1501,14 @@ public final class Rpc {
 
       private int code_ = 0;
       /**
-       * <code>.com.main.module.rpc.LoginRespCode code = 1;</code>
+       * <code>.rpc.LoginRespCode code = 1;</code>
        * @return The enum numeric value on the wire for code.
        */
       @java.lang.Override public int getCodeValue() {
         return code_;
       }
       /**
-       * <code>.com.main.module.rpc.LoginRespCode code = 1;</code>
+       * <code>.rpc.LoginRespCode code = 1;</code>
        * @param value The enum numeric value on the wire for code to set.
        * @return This builder for chaining.
        */
@@ -1519,7 +1519,7 @@ public final class Rpc {
         return this;
       }
       /**
-       * <code>.com.main.module.rpc.LoginRespCode code = 1;</code>
+       * <code>.rpc.LoginRespCode code = 1;</code>
        * @return The code.
        */
       @java.lang.Override
@@ -1529,7 +1529,7 @@ public final class Rpc {
         return result == null ? com.main.module.rpc.Rpc.LoginRespCode.UNRECOGNIZED : result;
       }
       /**
-       * <code>.com.main.module.rpc.LoginRespCode code = 1;</code>
+       * <code>.rpc.LoginRespCode code = 1;</code>
        * @param value The code to set.
        * @return This builder for chaining.
        */
@@ -1543,7 +1543,7 @@ public final class Rpc {
         return this;
       }
       /**
-       * <code>.com.main.module.rpc.LoginRespCode code = 1;</code>
+       * <code>.rpc.LoginRespCode code = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCode() {
@@ -1641,10 +1641,10 @@ public final class Rpc {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.main.module.rpc.LoginResp)
+      // @@protoc_insertion_point(builder_scope:rpc.LoginResp)
     }
 
-    // @@protoc_insertion_point(class_scope:com.main.module.rpc.LoginResp)
+    // @@protoc_insertion_point(class_scope:rpc.LoginResp)
     private static final com.main.module.rpc.Rpc.LoginResp DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.main.module.rpc.Rpc.LoginResp();
@@ -1682,7 +1682,7 @@ public final class Rpc {
   }
 
   public interface GoodsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.main.module.rpc.Goods)
+      // @@protoc_insertion_point(interface_extends:rpc.Goods)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1752,12 +1752,12 @@ public final class Rpc {
         getDetailBytes();
 
     /**
-     * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+     * <code>.rpc.GoodsTypes goodsType = 8;</code>
      * @return The enum numeric value on the wire for goodsType.
      */
     int getGoodsTypeValue();
     /**
-     * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+     * <code>.rpc.GoodsTypes goodsType = 8;</code>
      * @return The goodsType.
      */
     com.main.module.rpc.Rpc.GoodsTypes getGoodsType();
@@ -1773,11 +1773,11 @@ public final class Rpc {
     int getTotalSize();
   }
   /**
-   * Protobuf type {@code com.main.module.rpc.Goods}
+   * Protobuf type {@code rpc.Goods}
    */
   public static final class Goods extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.main.module.rpc.Goods)
+      // @@protoc_insertion_point(message_implements:rpc.Goods)
       GoodsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Goods.newBuilder() to construct.
@@ -1893,13 +1893,13 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_Goods_descriptor;
+      return com.main.module.rpc.Rpc.internal_static_rpc_Goods_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_Goods_fieldAccessorTable
+      return com.main.module.rpc.Rpc.internal_static_rpc_Goods_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.main.module.rpc.Rpc.Goods.class, com.main.module.rpc.Rpc.Goods.Builder.class);
     }
@@ -2092,14 +2092,14 @@ public final class Rpc {
     public static final int GOODSTYPE_FIELD_NUMBER = 8;
     private int goodsType_;
     /**
-     * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+     * <code>.rpc.GoodsTypes goodsType = 8;</code>
      * @return The enum numeric value on the wire for goodsType.
      */
     @java.lang.Override public int getGoodsTypeValue() {
       return goodsType_;
     }
     /**
-     * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+     * <code>.rpc.GoodsTypes goodsType = 8;</code>
      * @return The goodsType.
      */
     @java.lang.Override public com.main.module.rpc.Rpc.GoodsTypes getGoodsType() {
@@ -2362,21 +2362,21 @@ public final class Rpc {
       return builder;
     }
     /**
-     * Protobuf type {@code com.main.module.rpc.Goods}
+     * Protobuf type {@code rpc.Goods}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.main.module.rpc.Goods)
+        // @@protoc_insertion_point(builder_implements:rpc.Goods)
         com.main.module.rpc.Rpc.GoodsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_Goods_descriptor;
+        return com.main.module.rpc.Rpc.internal_static_rpc_Goods_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_Goods_fieldAccessorTable
+        return com.main.module.rpc.Rpc.internal_static_rpc_Goods_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.main.module.rpc.Rpc.Goods.class, com.main.module.rpc.Rpc.Goods.Builder.class);
       }
@@ -2423,7 +2423,7 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_Goods_descriptor;
+        return com.main.module.rpc.Rpc.internal_static_rpc_Goods_descriptor;
       }
 
       @java.lang.Override
@@ -2959,14 +2959,14 @@ public final class Rpc {
 
       private int goodsType_ = 0;
       /**
-       * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+       * <code>.rpc.GoodsTypes goodsType = 8;</code>
        * @return The enum numeric value on the wire for goodsType.
        */
       @java.lang.Override public int getGoodsTypeValue() {
         return goodsType_;
       }
       /**
-       * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+       * <code>.rpc.GoodsTypes goodsType = 8;</code>
        * @param value The enum numeric value on the wire for goodsType to set.
        * @return This builder for chaining.
        */
@@ -2977,7 +2977,7 @@ public final class Rpc {
         return this;
       }
       /**
-       * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+       * <code>.rpc.GoodsTypes goodsType = 8;</code>
        * @return The goodsType.
        */
       @java.lang.Override
@@ -2987,7 +2987,7 @@ public final class Rpc {
         return result == null ? com.main.module.rpc.Rpc.GoodsTypes.UNRECOGNIZED : result;
       }
       /**
-       * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+       * <code>.rpc.GoodsTypes goodsType = 8;</code>
        * @param value The goodsType to set.
        * @return This builder for chaining.
        */
@@ -3001,7 +3001,7 @@ public final class Rpc {
         return this;
       }
       /**
-       * <code>.com.main.module.rpc.GoodsTypes goodsType = 8;</code>
+       * <code>.rpc.GoodsTypes goodsType = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearGoodsType() {
@@ -3066,10 +3066,10 @@ public final class Rpc {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.main.module.rpc.Goods)
+      // @@protoc_insertion_point(builder_scope:rpc.Goods)
     }
 
-    // @@protoc_insertion_point(class_scope:com.main.module.rpc.Goods)
+    // @@protoc_insertion_point(class_scope:rpc.Goods)
     private static final com.main.module.rpc.Rpc.Goods DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.main.module.rpc.Rpc.Goods();
@@ -3107,39 +3107,39 @@ public final class Rpc {
   }
 
   public interface GoodsListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.main.module.rpc.GoodsList)
+      // @@protoc_insertion_point(interface_extends:rpc.GoodsList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+     * <code>repeated .rpc.Goods goods = 1;</code>
      */
     java.util.List<com.main.module.rpc.Rpc.Goods> 
         getGoodsList();
     /**
-     * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+     * <code>repeated .rpc.Goods goods = 1;</code>
      */
     com.main.module.rpc.Rpc.Goods getGoods(int index);
     /**
-     * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+     * <code>repeated .rpc.Goods goods = 1;</code>
      */
     int getGoodsCount();
     /**
-     * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+     * <code>repeated .rpc.Goods goods = 1;</code>
      */
     java.util.List<? extends com.main.module.rpc.Rpc.GoodsOrBuilder> 
         getGoodsOrBuilderList();
     /**
-     * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+     * <code>repeated .rpc.Goods goods = 1;</code>
      */
     com.main.module.rpc.Rpc.GoodsOrBuilder getGoodsOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code com.main.module.rpc.GoodsList}
+   * Protobuf type {@code rpc.GoodsList}
    */
   public static final class GoodsList extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.main.module.rpc.GoodsList)
+      // @@protoc_insertion_point(message_implements:rpc.GoodsList)
       GoodsListOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use GoodsList.newBuilder() to construct.
@@ -3214,13 +3214,13 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_GoodsList_descriptor;
+      return com.main.module.rpc.Rpc.internal_static_rpc_GoodsList_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_GoodsList_fieldAccessorTable
+      return com.main.module.rpc.Rpc.internal_static_rpc_GoodsList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.main.module.rpc.Rpc.GoodsList.class, com.main.module.rpc.Rpc.GoodsList.Builder.class);
     }
@@ -3228,14 +3228,14 @@ public final class Rpc {
     public static final int GOODS_FIELD_NUMBER = 1;
     private java.util.List<com.main.module.rpc.Rpc.Goods> goods_;
     /**
-     * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+     * <code>repeated .rpc.Goods goods = 1;</code>
      */
     @java.lang.Override
     public java.util.List<com.main.module.rpc.Rpc.Goods> getGoodsList() {
       return goods_;
     }
     /**
-     * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+     * <code>repeated .rpc.Goods goods = 1;</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.main.module.rpc.Rpc.GoodsOrBuilder> 
@@ -3243,21 +3243,21 @@ public final class Rpc {
       return goods_;
     }
     /**
-     * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+     * <code>repeated .rpc.Goods goods = 1;</code>
      */
     @java.lang.Override
     public int getGoodsCount() {
       return goods_.size();
     }
     /**
-     * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+     * <code>repeated .rpc.Goods goods = 1;</code>
      */
     @java.lang.Override
     public com.main.module.rpc.Rpc.Goods getGoods(int index) {
       return goods_.get(index);
     }
     /**
-     * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+     * <code>repeated .rpc.Goods goods = 1;</code>
      */
     @java.lang.Override
     public com.main.module.rpc.Rpc.GoodsOrBuilder getGoodsOrBuilder(
@@ -3423,21 +3423,21 @@ public final class Rpc {
       return builder;
     }
     /**
-     * Protobuf type {@code com.main.module.rpc.GoodsList}
+     * Protobuf type {@code rpc.GoodsList}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.main.module.rpc.GoodsList)
+        // @@protoc_insertion_point(builder_implements:rpc.GoodsList)
         com.main.module.rpc.Rpc.GoodsListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_GoodsList_descriptor;
+        return com.main.module.rpc.Rpc.internal_static_rpc_GoodsList_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_GoodsList_fieldAccessorTable
+        return com.main.module.rpc.Rpc.internal_static_rpc_GoodsList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.main.module.rpc.Rpc.GoodsList.class, com.main.module.rpc.Rpc.GoodsList.Builder.class);
       }
@@ -3473,7 +3473,7 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_GoodsList_descriptor;
+        return com.main.module.rpc.Rpc.internal_static_rpc_GoodsList_descriptor;
       }
 
       @java.lang.Override
@@ -3620,7 +3620,7 @@ public final class Rpc {
           com.main.module.rpc.Rpc.Goods, com.main.module.rpc.Rpc.Goods.Builder, com.main.module.rpc.Rpc.GoodsOrBuilder> goodsBuilder_;
 
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public java.util.List<com.main.module.rpc.Rpc.Goods> getGoodsList() {
         if (goodsBuilder_ == null) {
@@ -3630,7 +3630,7 @@ public final class Rpc {
         }
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public int getGoodsCount() {
         if (goodsBuilder_ == null) {
@@ -3640,7 +3640,7 @@ public final class Rpc {
         }
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public com.main.module.rpc.Rpc.Goods getGoods(int index) {
         if (goodsBuilder_ == null) {
@@ -3650,7 +3650,7 @@ public final class Rpc {
         }
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public Builder setGoods(
           int index, com.main.module.rpc.Rpc.Goods value) {
@@ -3667,7 +3667,7 @@ public final class Rpc {
         return this;
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public Builder setGoods(
           int index, com.main.module.rpc.Rpc.Goods.Builder builderForValue) {
@@ -3681,7 +3681,7 @@ public final class Rpc {
         return this;
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public Builder addGoods(com.main.module.rpc.Rpc.Goods value) {
         if (goodsBuilder_ == null) {
@@ -3697,7 +3697,7 @@ public final class Rpc {
         return this;
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public Builder addGoods(
           int index, com.main.module.rpc.Rpc.Goods value) {
@@ -3714,7 +3714,7 @@ public final class Rpc {
         return this;
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public Builder addGoods(
           com.main.module.rpc.Rpc.Goods.Builder builderForValue) {
@@ -3728,7 +3728,7 @@ public final class Rpc {
         return this;
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public Builder addGoods(
           int index, com.main.module.rpc.Rpc.Goods.Builder builderForValue) {
@@ -3742,7 +3742,7 @@ public final class Rpc {
         return this;
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public Builder addAllGoods(
           java.lang.Iterable<? extends com.main.module.rpc.Rpc.Goods> values) {
@@ -3757,7 +3757,7 @@ public final class Rpc {
         return this;
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public Builder clearGoods() {
         if (goodsBuilder_ == null) {
@@ -3770,7 +3770,7 @@ public final class Rpc {
         return this;
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public Builder removeGoods(int index) {
         if (goodsBuilder_ == null) {
@@ -3783,14 +3783,14 @@ public final class Rpc {
         return this;
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public com.main.module.rpc.Rpc.Goods.Builder getGoodsBuilder(
           int index) {
         return getGoodsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public com.main.module.rpc.Rpc.GoodsOrBuilder getGoodsOrBuilder(
           int index) {
@@ -3800,7 +3800,7 @@ public final class Rpc {
         }
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public java.util.List<? extends com.main.module.rpc.Rpc.GoodsOrBuilder> 
            getGoodsOrBuilderList() {
@@ -3811,14 +3811,14 @@ public final class Rpc {
         }
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public com.main.module.rpc.Rpc.Goods.Builder addGoodsBuilder() {
         return getGoodsFieldBuilder().addBuilder(
             com.main.module.rpc.Rpc.Goods.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public com.main.module.rpc.Rpc.Goods.Builder addGoodsBuilder(
           int index) {
@@ -3826,7 +3826,7 @@ public final class Rpc {
             index, com.main.module.rpc.Rpc.Goods.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.main.module.rpc.Goods goods = 1;</code>
+       * <code>repeated .rpc.Goods goods = 1;</code>
        */
       public java.util.List<com.main.module.rpc.Rpc.Goods.Builder> 
            getGoodsBuilderList() {
@@ -3859,10 +3859,10 @@ public final class Rpc {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.main.module.rpc.GoodsList)
+      // @@protoc_insertion_point(builder_scope:rpc.GoodsList)
     }
 
-    // @@protoc_insertion_point(class_scope:com.main.module.rpc.GoodsList)
+    // @@protoc_insertion_point(class_scope:rpc.GoodsList)
     private static final com.main.module.rpc.Rpc.GoodsList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.main.module.rpc.Rpc.GoodsList();
@@ -3900,7 +3900,7 @@ public final class Rpc {
   }
 
   public interface GoodsUpdateRetOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.main.module.rpc.GoodsUpdateRet)
+      // @@protoc_insertion_point(interface_extends:rpc.GoodsUpdateRet)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3910,11 +3910,11 @@ public final class Rpc {
     boolean getSuccess();
   }
   /**
-   * Protobuf type {@code com.main.module.rpc.GoodsUpdateRet}
+   * Protobuf type {@code rpc.GoodsUpdateRet}
    */
   public static final class GoodsUpdateRet extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.main.module.rpc.GoodsUpdateRet)
+      // @@protoc_insertion_point(message_implements:rpc.GoodsUpdateRet)
       GoodsUpdateRetOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use GoodsUpdateRet.newBuilder() to construct.
@@ -3980,13 +3980,13 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_GoodsUpdateRet_descriptor;
+      return com.main.module.rpc.Rpc.internal_static_rpc_GoodsUpdateRet_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_GoodsUpdateRet_fieldAccessorTable
+      return com.main.module.rpc.Rpc.internal_static_rpc_GoodsUpdateRet_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.main.module.rpc.Rpc.GoodsUpdateRet.class, com.main.module.rpc.Rpc.GoodsUpdateRet.Builder.class);
     }
@@ -4159,21 +4159,21 @@ public final class Rpc {
       return builder;
     }
     /**
-     * Protobuf type {@code com.main.module.rpc.GoodsUpdateRet}
+     * Protobuf type {@code rpc.GoodsUpdateRet}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.main.module.rpc.GoodsUpdateRet)
+        // @@protoc_insertion_point(builder_implements:rpc.GoodsUpdateRet)
         com.main.module.rpc.Rpc.GoodsUpdateRetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_GoodsUpdateRet_descriptor;
+        return com.main.module.rpc.Rpc.internal_static_rpc_GoodsUpdateRet_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_GoodsUpdateRet_fieldAccessorTable
+        return com.main.module.rpc.Rpc.internal_static_rpc_GoodsUpdateRet_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.main.module.rpc.Rpc.GoodsUpdateRet.class, com.main.module.rpc.Rpc.GoodsUpdateRet.Builder.class);
       }
@@ -4204,7 +4204,7 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_GoodsUpdateRet_descriptor;
+        return com.main.module.rpc.Rpc.internal_static_rpc_GoodsUpdateRet_descriptor;
       }
 
       @java.lang.Override
@@ -4348,10 +4348,10 @@ public final class Rpc {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.main.module.rpc.GoodsUpdateRet)
+      // @@protoc_insertion_point(builder_scope:rpc.GoodsUpdateRet)
     }
 
-    // @@protoc_insertion_point(class_scope:com.main.module.rpc.GoodsUpdateRet)
+    // @@protoc_insertion_point(class_scope:rpc.GoodsUpdateRet)
     private static final com.main.module.rpc.Rpc.GoodsUpdateRet DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.main.module.rpc.Rpc.GoodsUpdateRet();
@@ -4389,7 +4389,7 @@ public final class Rpc {
   }
 
   public interface ShopGoodsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.main.module.rpc.ShopGoods)
+      // @@protoc_insertion_point(interface_extends:rpc.ShopGoods)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4405,11 +4405,11 @@ public final class Rpc {
     int getCount();
   }
   /**
-   * Protobuf type {@code com.main.module.rpc.ShopGoods}
+   * Protobuf type {@code rpc.ShopGoods}
    */
   public static final class ShopGoods extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.main.module.rpc.ShopGoods)
+      // @@protoc_insertion_point(message_implements:rpc.ShopGoods)
       ShopGoodsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ShopGoods.newBuilder() to construct.
@@ -4480,13 +4480,13 @@ public final class Rpc {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_ShopGoods_descriptor;
+      return com.main.module.rpc.Rpc.internal_static_rpc_ShopGoods_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_ShopGoods_fieldAccessorTable
+      return com.main.module.rpc.Rpc.internal_static_rpc_ShopGoods_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.main.module.rpc.Rpc.ShopGoods.class, com.main.module.rpc.Rpc.ShopGoods.Builder.class);
     }
@@ -4680,21 +4680,21 @@ public final class Rpc {
       return builder;
     }
     /**
-     * Protobuf type {@code com.main.module.rpc.ShopGoods}
+     * Protobuf type {@code rpc.ShopGoods}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.main.module.rpc.ShopGoods)
+        // @@protoc_insertion_point(builder_implements:rpc.ShopGoods)
         com.main.module.rpc.Rpc.ShopGoodsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_ShopGoods_descriptor;
+        return com.main.module.rpc.Rpc.internal_static_rpc_ShopGoods_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_ShopGoods_fieldAccessorTable
+        return com.main.module.rpc.Rpc.internal_static_rpc_ShopGoods_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.main.module.rpc.Rpc.ShopGoods.class, com.main.module.rpc.Rpc.ShopGoods.Builder.class);
       }
@@ -4727,7 +4727,7 @@ public final class Rpc {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.main.module.rpc.Rpc.internal_static_com_main_module_rpc_ShopGoods_descriptor;
+        return com.main.module.rpc.Rpc.internal_static_rpc_ShopGoods_descriptor;
       }
 
       @java.lang.Override
@@ -4906,10 +4906,10 @@ public final class Rpc {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.main.module.rpc.ShopGoods)
+      // @@protoc_insertion_point(builder_scope:rpc.ShopGoods)
     }
 
-    // @@protoc_insertion_point(class_scope:com.main.module.rpc.ShopGoods)
+    // @@protoc_insertion_point(class_scope:rpc.ShopGoods)
     private static final com.main.module.rpc.Rpc.ShopGoods DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.main.module.rpc.Rpc.ShopGoods();
@@ -4947,35 +4947,35 @@ public final class Rpc {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_main_module_rpc_LoginReq_descriptor;
+    internal_static_rpc_LoginReq_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_main_module_rpc_LoginReq_fieldAccessorTable;
+      internal_static_rpc_LoginReq_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_main_module_rpc_LoginResp_descriptor;
+    internal_static_rpc_LoginResp_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_main_module_rpc_LoginResp_fieldAccessorTable;
+      internal_static_rpc_LoginResp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_main_module_rpc_Goods_descriptor;
+    internal_static_rpc_Goods_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_main_module_rpc_Goods_fieldAccessorTable;
+      internal_static_rpc_Goods_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_main_module_rpc_GoodsList_descriptor;
+    internal_static_rpc_GoodsList_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_main_module_rpc_GoodsList_fieldAccessorTable;
+      internal_static_rpc_GoodsList_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_main_module_rpc_GoodsUpdateRet_descriptor;
+    internal_static_rpc_GoodsUpdateRet_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_main_module_rpc_GoodsUpdateRet_fieldAccessorTable;
+      internal_static_rpc_GoodsUpdateRet_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_main_module_rpc_ShopGoods_descriptor;
+    internal_static_rpc_ShopGoods_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_main_module_rpc_ShopGoods_fieldAccessorTable;
+      internal_static_rpc_ShopGoods_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4985,63 +4985,61 @@ public final class Rpc {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\trpc.proto\022\023com.main.module.rpc\".\n\010Logi" +
-      "nReq\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t" +
-      "\"J\n\tLoginResp\0220\n\004code\030\001 \001(\0162\".com.main.m" +
-      "odule.rpc.LoginRespCode\022\013\n\003sid\030\002 \001(\t\"\264\001\n" +
-      "\005Goods\022\n\n\002id\030\001 \001(\005\022\016\n\006imgUrl\030\002 \001(\t\022\014\n\004na" +
-      "me\030\003 \001(\t\022\014\n\004star\030\004 \001(\005\022\r\n\005price\030\005 \001(\005\022\r\n" +
-      "\005brief\030\006 \001(\t\022\016\n\006detail\030\007 \001(\t\0222\n\tgoodsTyp" +
-      "e\030\010 \001(\0162\037.com.main.module.rpc.GoodsTypes" +
-      "\022\021\n\ttotalSize\030\t \001(\005\"6\n\tGoodsList\022)\n\005good" +
-      "s\030\001 \003(\0132\032.com.main.module.rpc.Goods\"!\n\016G" +
-      "oodsUpdateRet\022\017\n\007success\030\001 \001(\010\"+\n\tShopGo" +
-      "ods\022\017\n\007goodsId\030\001 \001(\005\022\r\n\005count\030\002 \001(\005*2\n\rL" +
-      "oginRespCode\022\024\n\020ERROR_LOGIN_INFO\020\000\022\013\n\007SU" +
-      "CCESS\020\001*Q\n\nGoodsTypes\022\013\n\007Digital\020\000\022\022\n\016Ho" +
-      "meAppliances\020\001\022\024\n\020DailyNecessities\020\002\022\014\n\010" +
-      "Clothing\020\003B\025\n\023com.main.module.rpcb\006proto" +
-      "3"
+      "\n\trpc.proto\022\003rpc\".\n\010LoginReq\022\020\n\010username" +
+      "\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\":\n\tLoginResp\022 \n" +
+      "\004code\030\001 \001(\0162\022.rpc.LoginRespCode\022\013\n\003sid\030\002" +
+      " \001(\t\"\244\001\n\005Goods\022\n\n\002id\030\001 \001(\005\022\016\n\006imgUrl\030\002 \001" +
+      "(\t\022\014\n\004name\030\003 \001(\t\022\014\n\004star\030\004 \001(\005\022\r\n\005price\030" +
+      "\005 \001(\005\022\r\n\005brief\030\006 \001(\t\022\016\n\006detail\030\007 \001(\t\022\"\n\t" +
+      "goodsType\030\010 \001(\0162\017.rpc.GoodsTypes\022\021\n\ttota" +
+      "lSize\030\t \001(\005\"&\n\tGoodsList\022\031\n\005goods\030\001 \003(\0132" +
+      "\n.rpc.Goods\"!\n\016GoodsUpdateRet\022\017\n\007success" +
+      "\030\001 \001(\010\"+\n\tShopGoods\022\017\n\007goodsId\030\001 \001(\005\022\r\n\005" +
+      "count\030\002 \001(\005*2\n\rLoginRespCode\022\024\n\020ERROR_LO" +
+      "GIN_INFO\020\000\022\013\n\007SUCCESS\020\001*Q\n\nGoodsTypes\022\013\n" +
+      "\007Digital\020\000\022\022\n\016HomeAppliances\020\001\022\024\n\020DailyN" +
+      "ecessities\020\002\022\014\n\010Clothing\020\003B\025\n\023com.main.m" +
+      "odule.rpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_com_main_module_rpc_LoginReq_descriptor =
+    internal_static_rpc_LoginReq_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_main_module_rpc_LoginReq_fieldAccessorTable = new
+    internal_static_rpc_LoginReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_main_module_rpc_LoginReq_descriptor,
+        internal_static_rpc_LoginReq_descriptor,
         new java.lang.String[] { "Username", "Password", });
-    internal_static_com_main_module_rpc_LoginResp_descriptor =
+    internal_static_rpc_LoginResp_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_main_module_rpc_LoginResp_fieldAccessorTable = new
+    internal_static_rpc_LoginResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_main_module_rpc_LoginResp_descriptor,
+        internal_static_rpc_LoginResp_descriptor,
         new java.lang.String[] { "Code", "Sid", });
-    internal_static_com_main_module_rpc_Goods_descriptor =
+    internal_static_rpc_Goods_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_com_main_module_rpc_Goods_fieldAccessorTable = new
+    internal_static_rpc_Goods_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_main_module_rpc_Goods_descriptor,
+        internal_static_rpc_Goods_descriptor,
         new java.lang.String[] { "Id", "ImgUrl", "Name", "Star", "Price", "Brief", "Detail", "GoodsType", "TotalSize", });
-    internal_static_com_main_module_rpc_GoodsList_descriptor =
+    internal_static_rpc_GoodsList_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_com_main_module_rpc_GoodsList_fieldAccessorTable = new
+    internal_static_rpc_GoodsList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_main_module_rpc_GoodsList_descriptor,
+        internal_static_rpc_GoodsList_descriptor,
         new java.lang.String[] { "Goods", });
-    internal_static_com_main_module_rpc_GoodsUpdateRet_descriptor =
+    internal_static_rpc_GoodsUpdateRet_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_com_main_module_rpc_GoodsUpdateRet_fieldAccessorTable = new
+    internal_static_rpc_GoodsUpdateRet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_main_module_rpc_GoodsUpdateRet_descriptor,
+        internal_static_rpc_GoodsUpdateRet_descriptor,
         new java.lang.String[] { "Success", });
-    internal_static_com_main_module_rpc_ShopGoods_descriptor =
+    internal_static_rpc_ShopGoods_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_com_main_module_rpc_ShopGoods_fieldAccessorTable = new
+    internal_static_rpc_ShopGoods_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_main_module_rpc_ShopGoods_descriptor,
+        internal_static_rpc_ShopGoods_descriptor,
         new java.lang.String[] { "GoodsId", "Count", });
   }
 

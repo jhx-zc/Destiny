@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package com.main.module.rpc;
+package rpc;
 option java_package = "com.main.module.rpc";
 
 enum LoginRespCode{
